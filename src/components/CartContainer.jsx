@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { RiRefreshFill } from "react-icons/ri";
-
 import { motion } from "framer-motion";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
@@ -26,6 +25,7 @@ const CartContainer = () => {
     }, 0);
     setTot(totalPrice);
     console.log(tot);
+    // eslint-disable-next-line
   }, [tot, flag]);
 
   const clearCart = () => {
