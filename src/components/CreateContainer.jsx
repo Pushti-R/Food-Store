@@ -31,7 +31,7 @@ const CreateContainer = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [{ foodItems }, dispatch] = useStateValue();
+  const [dispatch] = useStateValue();
 
   const uploadImage = (e) => {
     setIsLoading(true);
@@ -42,8 +42,8 @@ const CreateContainer = () => {
     uploadTask.on(
       "state_changed",
       (snapshot) => {
-        const uploadProgress =
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        // const uploadProgress =
+        //   (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
       },
       (error) => {
         console.log(error);
@@ -182,7 +182,7 @@ const CreateContainer = () => {
                   </label>
                 </>) : ( <>
                   <div className='relative h-full'>
-                    <img src={imageAsset} alt="uploaded image" className='w-full h-full object-cover'/>
+                    <img src={imageAsset} alt="" className='w-full h-full object-cover'/>
                     <button type='button' className='absolute bottom-3 right-3 p-3 rounded-full bg-red-500 text-xl cursor-pointer outline-none hover:shadow-md duration-500 transition-all ease-in-out' onClick={deleteImage}>
                       <MdDelete className='text-white'/>
                     </button>
