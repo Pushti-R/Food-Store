@@ -35,7 +35,8 @@ import { actionType } from './context/reducer'
 
 const App = () => {
 
-  const [dispatch] = useStateValue();
+  // eslint-disable-next-line
+  const [{foodItems},dispatch] = useStateValue();
 
   const fetchData = async () => {
     await getAllFoodItems().then((data) => {
