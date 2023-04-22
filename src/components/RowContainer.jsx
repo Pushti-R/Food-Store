@@ -26,7 +26,7 @@ const RowContainer = ({ flag, data, scrollValue }) => {
     
     useEffect(() => {
         addtocart();
-        // eslint-disable-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line
     }, [items]);
   return (
     <div ref={rowContainer}
