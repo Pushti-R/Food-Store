@@ -1,5 +1,5 @@
 # Visit the site
-(https://foodiesstop.netlify.app/)
+https://foodiesstop.netlify.app/
 
 # Getting Started with Create React App
 
